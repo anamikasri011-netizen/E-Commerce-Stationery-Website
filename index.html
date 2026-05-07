@@ -1,0 +1,267 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddharth Stationery</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+<i class="fa-solid fa-pen-ruler"></i>
+<h2>Siddharth Stationery</h2>
+</div>
+
+<div class="search-box">
+<input type="text" placeholder="Search products..." id="searchInput">
+<button id="searchBtn">
+<i class="fa-solid fa-magnifying-glass"></i>
+</button>
+</div>
+
+<a href="about.html" target="_blank" class="about-btn">About Us</a>
+
+<div class="nav-icons">
+
+<div class="icon-box" onclick="openAccount()">
+<i class="fa-solid fa-user"></i>
+<p>Account</p>
+</div>
+
+<div class="icon-box cart-box">
+<i class="fa-solid fa-cart-shopping"></i>
+<p>Cart <span id="cartCount">0</span></p>
+</div>
+
+</div>
+
+</nav>
+
+<div class="menu">
+<a href="#">Home</a>
+<a href="#">Pens</a>
+<a href="#">Books</a>
+<a href="#">Files</a>
+<a href="#">Colors</a>
+<a href="#">Contact</a>
+</div>
+
+</header>
+
+<section class="hero"></section>
+
+<section class="category-section">
+
+<div class="category-box" onclick="filterProducts('all')">All</div>
+<div class="category-box" onclick="filterProducts('pens')">Pens</div>
+<div class="category-box" onclick="filterProducts('books')">Books</div>
+<div class="category-box" onclick="filterProducts('files')">Files</div>
+<div class="category-box" onclick="filterProducts('colors')">Colors</div>
+<div class="category-box" onclick="filterProducts('others')">Others</div>
+
+</section>
+
+<!-- Products -->
+<section class="products">
+
+<!-- Pens -->
+<div class="product-card pens">
+<img src="Luxury pen.png" onclick="openImage(this.src)">
+<h3>Luxury Pen Set</h3>
+<p>₹199</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<div class="product-card pens">
+<img src="Marker set.png" onclick="openImage(this.src)">
+<h3>Marker Set</h3>
+<p>₹149</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<div class="product-card pens">
+<img src="Gell pen.png" onclick="openImage(this.src)">
+<h3>Gel Pen Pack</h3>
+<p>₹99</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<div class="product-card pens">
+<img src="ball pen.png" onclick="openImage(this.src)">
+<h3>Ball Pen Box</h3>
+<p>₹129</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<!-- Books -->
+<div class="product-card books">
+<img src="study books.png" onclick="openImage(this.src)">
+<h3>Study Books</h3>
+<p>₹349</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<div class="product-card books">
+<img src="notesbook.png" onclick="openImage(this.src)">
+<h3>Notebook Pack</h3>
+<p>₹249</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<div class="product-card books">
+<img src="premium diary.png" onclick="openImage(this.src)">
+<h3>Premium Diary</h3>
+<p>₹299</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<div class="product-card books">
+<img src="register.png" onclick="openImage(this.src)">
+<h3>Register Book</h3>
+<p>₹159</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<!-- Files -->
+<div class="product-card files">
+<img src="files.png" onclick="openImage(this.src)">
+<h3>Office File Set</h3>
+<p>₹299</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<div class="product-card files">
+<img src="plastic folder.png" onclick="openImage(this.src)">
+<h3>Plastic Folder</h3>
+<p>₹89</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<div class="product-card files">
+<img src="clipboard.png" onclick="openImage(this.src)">
+<h3>Clipboard</h3>
+<p>₹149</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<div class="product-card files">
+<img src="stapler.png" onclick="openImage(this.src)">
+<h3>Mini Stapler</h3>
+<p>₹199</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+
+<div class="product-card colors">
+<img src="rayon set.png" onclick="openImage(this.src)">
+<h3>Crayon Set</h3>
+<p>₹149</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<div class="product-card colors">
+<img src="watercolor.png" onclick="openImage(this.src)">
+<h3>Water Color Set</h3>
+<p>₹249</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<div class="product-card colors">
+<img src="sketchpen.png" onclick="openImage(this.src)">
+<h3>Sketch Pen Pack</h3>
+<p>₹199</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<!-- Others -->
+<div class="product-card others">
+<img src="pencil.png" onclick="openImage(this.src)">
+<h3>Pencil Box</h3>
+<p>₹129</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<div class="product-card others">
+<img src="scale.png" onclick="openImage(this.src)">
+<h3>Geometry Scale</h3>
+<p>₹89</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<div class="product-card others">
+<img src="glue.png" onclick="openImage(this.src)">
+<h3>Glue Stick</h3>
+<p>₹79</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+<div class="product-card others">
+<img src="calculator.png" onclick="openImage(this.src)">
+<h3>Calculator</h3>
+<p>₹499</p>
+<button onclick="addCart()">Add to Cart</button>
+</div>
+
+
+</section>
+<footer>
+<div class="footer-container">
+
+<div class="footer-box">
+<img src="footer-logo.png" class="footer-img">
+<h3>Siddharth Stationery</h3>
+<p>Your one stop shop for school and office stationery.</p>
+</div>
+
+<div class="footer-box">
+<h4>Quick Links</h4>
+<p>Home</p>
+<p>Products</p>
+<p>Categories</p>
+<p>Contact</p>
+</div>
+
+<div class="footer-box">
+<h4>Contact Us</h4>
+<p>Email: info@siddharth.com</p>
+<p>Phone: +91 9876543210</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Siddharth Stationery
+</div>
+</footer>
+
+<!-- Product Image Popup -->
+<div id="imageModal" class="modal">
+<span class="close-btn" onclick="closeImage()">&times;</span>
+<img class="modal-content" id="bigImage">
+</div>
+
+<!-- Account Popup -->
+<div id="accountModal" class="modal">
+<div class="form-box">
+<span class="close-btn small-close" onclick="closeAccount()">&times;</span>
+<h2>Create Account</h2>
+<input type="text" placeholder="Full Name">
+<input type="email" placeholder="Email">
+<input type="text" placeholder="Mobile Number">
+<input type="password" placeholder="Password">
+<button onclick="submitForm()">Submit</button>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
